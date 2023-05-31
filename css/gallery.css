@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient( #1c303d, #0c2d6b);
+}
+
+.album {
+    display: flex;
+    transform-style: preserve-3d;
+    gap: 60px;
+    transform: rotatey(3deg) rotateX(34deg);
+}
+
+.album .frame {
+    position: relative;
+    top: 40px;
+    width: 300px;
+    height: 170px;
+    transform-style: preserve-3d;
+    transition: 2.5s ease;
+    transition-delay: calc(0.2s * var(--j));
+    animation: anim 20s linear infinite;
+      }
+      .album .frame:nth-child(odd) {
+          animation-direction: reverse;
+      }
+      .album .frame:first-child , .album .frame:last-child {
+          top: 0px;
+        width: 50px;
+        height: 250px;   
+      }
+
+      .album .frame:first-child span, .album .frame:last-child span{
+        background: linear-gradient(#0d0b31, #161352);  
+        transform: rotatex(calc(36deg * var(--i))) translateZ(384px);
+      }
+
+@keyframes anim {
+    
+100% {
+    transform: rotatex(360deg);
+  }
+}
+.album .frame span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(#ffd700, #c4a926); */
+      transform: rotatex(calc(36deg * var(--i))) translateZ(260px);  
+    /* overflow: hidden; */
+}
+.album .frame span img{
+    width: 100%;
+    height: 100%;
+}
+
+
+ @media (min-width: 320px) and (max-width: 480px) {
+  .album {
+    gap: 10px;
+ 
+  }
+  .album .frame {
+    top: 5px;
+    width: 50px;
+    height: 30px;
+     }
+     .album .frame:first-child , .album .frame:last-child {
+       top: 0px;
+     width: 10px;
+     height: 40px;   
+   }
+ 
+   .album .frame span {
+     
+       transform: rotatex(calc(36deg * var(--i))) translateZ(46px);  
+ }
+ 
+   .album .frame:first-child span, .album .frame:last-child span{
+     background: linear-gradient(#0d0b31, #161352);  
+     transform: rotatex(calc(36deg * var(--i))) translateZ(61px);
+   }
+ } 
+ 
+ 
+  @media (min-width: 640px) and (orientation: landscape) {
+ .album {
+   gap: 10px;
+
+ }
+ .album .frame {
+   top: 10px;
+   width: 120px;
+   height: 80px;
+    }
+    .album .frame:first-child , .album .frame:last-child {
+      top: 0px;
+    width: 30px;
+    height: 90px;   
+  }
+
+  .album .frame span {
+    
+      transform: rotatex(calc(36deg * var(--i))) translateZ(123px);  
+    overflow: hidden;
+}
+
+  .album .frame:first-child span, .album .frame:last-child span{
+    background: linear-gradient(#0d0b31, #161352);  
+    transform: rotatex(calc(36deg * var(--i))) translateZ(143px);
+  }
+} 
+
+ @media (min-width: 481px) and (max-width: 767px)  {
+  .album {
+    gap: 10px;
+ 
+  }
+  .album .frame {
+    top: 10px;
+    width: 95px;
+    height: 70px;
+     }
+     .album .frame:first-child , .album .frame:last-child {
+       top: 0px;
+     width: 20px;
+     height: 110px;   
+   }
+ 
+   .album .frame span {
+     
+       transform: rotatex(calc(36deg * var(--i))) translateZ(107px);  
+ }
+ 
+   .album .frame:first-child span, .album .frame:last-child span{
+     background: linear-gradient(#0d0b31, #161352);  
+     transform: rotatex(calc(36deg * var(--i))) translateZ(165px);
+   }
+ } 
+@media (min-width: 720px) and (orientation: landscape) {
+  .album {
+    gap: 20px;
+ 
+  }
+  .album .frame {
+    top: 5px;
+    width: 130px;
+    height: 70px;
+     }
+     .album .frame:first-child , .album .frame:last-child {
+       top: 0px;
+     width: 25px;
+     height: 95px;   
+   }
+ 
+   .album .frame span {
+     
+       transform: rotatex(calc(36deg * var(--i))) translateZ(108px);  
+ }
+ 
+   .album .frame:first-child span, .album .frame:last-child span{
+     background: linear-gradient(#0d0b31, #161352);  
+     transform: rotatex(calc(36deg * var(--i))) translateZ(147px);
+   }
+ }
+
+  @media (min-width: 768px) and (max-width: 1024px)  { */
+  .album {
+    gap: 25px;
+  }
+  .album .frame {
+    top: 5px;
+    width: 135px;
+    height: 70px;
+     }
+     .album .frame:first-child , .album .frame:last-child {
+       /* top: 0px; */
+     width: 40px;
+     height: 90px;   
+   }
+ 
+   .album .frame span {
+     
+       transform: rotatex(calc(36deg * var(--i))) translateZ(109px);  
+ }
+ 
+   .album .frame:first-child span, .album .frame:last-child span {
+     background: linear-gradient(#0d0b31, #161352);  
+     transform: rotatex(calc(36deg * var(--i))) translateZ(138px);
+   }
+ }   
+
+ @media (min-width: 1025px) and (max-width: 1280px)  {
+  .album {
+    gap: 25px;
+ 
+  }
+  .album .frame {
+    top: 5px;
+    width: 185px;
+    height: 120px;
+     }
+     .album .frame:first-child , .album .frame:last-child {
+       top: 0px;
+     width: 40px;
+     height: 160px;   
+   }
+ 
+   .album .frame span {
+     
+       transform: rotatex(calc(36deg * var(--i))) translateZ(185px);  
+ }
+ 
+   .album .frame:first-child span, .album .frame:last-child span{
+     background: linear-gradient(#0d0b31, #161352);  
+     transform: rotatex(calc(36deg * var(--i))) translateZ(245px);
+   }
+ }  
+ @media (min-width: 1366px)   {
+  .album {
+    gap: 25px;
+ 
+  }
+  .album .frame {
+    top: 5px;
+    width: 250px;
+    height: 120px;
+     }
+     .album .frame:first-child , .album .frame:last-child {
+       top: 0px;
+     width: 40px;
+     height: 160px;   
+   }
+ 
+   .album .frame span {
+     
+       transform: rotatex(calc(36deg * var(--i))) translateZ(185px);  
+ }
+ 
+   .album .frame:first-child span, .album .frame:last-child span{
+     background: linear-gradient(#0d0b31, #161352);  
+     transform: rotatex(calc(36deg * var(--i))) translateZ(245px);
+   }
+ }  
